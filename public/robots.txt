@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /aviso-legal
+Disallow: /contacto
+Disallow: /not-found
+Disallow: /politica-de-cookies
+Disallow: /politica-de-privacidad
+
+Sitemap: https://www.cristalvision.online/api/sitemap.xml

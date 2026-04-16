@@ -1,0 +1,53 @@
+.notification_system{
+    height: auto;
+    margin: 30px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+.notification_system_title_text{
+    color: #333333; 
+    font-size: 24px;
+    font-weight: 600;
+    word-wrap: break-word;
+}
+
+.notification_system_description_text{
+    font-size: 16px;
+    color: #666;
+}
+
+.notification_system_description{
+    margin: 20px 0px 0px 0px;
+}
+
+.notification_system_field_message{
+    display: flex;
+    align-items: center;
+    margin: 20px 0px 0px 0px;
+}
+
+.notification_system_field_message_icon{
+    width: 24px;
+    color: #fff;
+}
+
+.notification_system_field_message_input{
+    height: 50px;
+    flex-grow: 1;
+    background: #f5f5f5;
+    padding: 5px 10px;
+    border: none;
+    line-height: 30px;
+}
+
+.notification_system_field_message_input:focus{
+    outline: none; 
+}
+
+.notification_system_field_message_button{
+    background-color: #9F0202;
+    height: 50px;
+    width: 59px;
+    border-radius: 0px 4px 4px 0px;
+    cursor: pointer;
+}

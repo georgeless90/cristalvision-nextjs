@@ -1,0 +1,33 @@
+#root{
+    min-height: 100vh;
+}
+
+.app-routes{
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.page{
+    position: relative;
+    z-index: 1;
+}
+
+.page_body {
+  padding: 0px 16px 0px 16px;
+}
+
+
+@media only screen and (min-width: 1200px) {
+    .page_body {
+      padding: 16px 10% 16px 10%;
+    }
+    
+  }
+  
+  @media only screen and (min-width: 1400px) {
+    .page_body {
+      padding: 16px 20% 16px 20%;
+    }
+    
+  }

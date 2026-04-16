@@ -1,0 +1,102 @@
+.vertical_menu_base {
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 3; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden;
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  padding: 0px !important;
+}
+
+.vertical_menu {
+  display: block !important;
+  position: relative;
+  overflow: hidden;
+  z-index: 4 !important;
+  height: 100%;
+  width: 90%;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 2px 6px #0000003d;
+  opacity: 1;
+  float: left;
+  padding: 0px !important;
+  overflow-y: auto;
+}
+
+.vertical_menu_auth {
+  padding: 16px;
+}
+
+.vertical_menu_item{
+  width: 100%;
+  height: auto;
+}
+
+.vertical_menu_link_children{
+  width: 100%;
+  height: auto;
+  border-left: 5px solid #9F0202;
+}
+
+.vertical_menu_public_header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 53px;
+  background-color: #9F0202;
+  padding: 10px;
+}
+
+.vertical_menu_public_close {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: #333333;
+  width: 100%;
+  height: 40px;
+  padding: 0px 20px 0px 20px;
+}
+
+.vertical_menu_public_close_icon {
+  width: 16px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.vertical_menu_link {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  border-bottom: 1px solid #eeeeee;
+  padding: 0px 20px 0px 20px;
+  cursor: pointer;
+}
+
+.vertical_menu_link_icon {
+  width: 16px;
+  color: #9F0202;
+  margin-right: 8px;
+}
+
+.vertical_menu_public_header_text {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.vertical_menu_link_arrow_icon{
+  position: absolute;
+  right: 60px;
+  width: 12px;
+  color: #333;
+}
+
+@media only screen and (min-width: 601px) {
+  .vertical_menu {
+    width: 50%;
+  }
+}

@@ -1,0 +1,16 @@
+@media only screen and (min-width: 992px) {
+  .page_body_split {
+    display: flex;
+  }
+
+  .page_body_left {
+    float: left;
+    width: 40%;
+    margin: 0px 50px 0px 0px;
+  }
+
+  .page_body_right {
+    float: left;
+    width: 60%;
+  }
+}

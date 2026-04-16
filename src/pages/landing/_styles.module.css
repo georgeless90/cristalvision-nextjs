@@ -1,0 +1,17 @@
+.page_title_text {
+  color: #333333;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+}
+
+.ul_li_text {
+  list-style: inside;
+  font-size: 18px;
+  font-family: "Quicksand", sans-serif;
+  line-height: 1.5;
+  word-wrap: break-word;
+  padding: 20px 0px 0px 0px;
+}
+
+

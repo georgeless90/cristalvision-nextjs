@@ -1,0 +1,37 @@
+.imagescta_one{
+    width: 100%;
+    height: auto;
+    padding: 0px 15px;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+
+.imagescta_one_img{
+    width: 100%;
+    height: auto;
+}
+
+.imagescta_two{
+    width: 100%;
+    height: auto;
+    padding: 0px 15px;
+    margin-top: 15px;
+}
+
+.imagescta_two_img{
+    width: 100%;
+    height: auto;
+}
+
+.imagescta_three{
+    width: 100%;
+    height: auto;
+    padding: 0px 15px;
+    margin-top: 15px;
+}
+
+.imagescta_three_img{
+    width: 100%;
+    height: auto;
+}

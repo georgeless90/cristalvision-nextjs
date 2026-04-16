@@ -1,0 +1,42 @@
+.company_information{
+    display: flex;
+    align-items: center;
+    height: 34px;
+    margin: 30px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    cursor: pointer;
+}
+
+.company_information_title{
+    width: 100%;
+
+}
+
+.company_information_dropdown_icon{
+    width: 14px;
+    cursor: pointer;
+}
+
+.company_information_title_text{
+    color: #333333; 
+    font-size: 24px;
+    font-weight: 600;
+    word-wrap: break-word;
+
+}
+
+.company_information_dropdown{
+    padding: 0px 15px 0px 15px;
+   
+}
+
+.company_information_dropdown_item{
+    height: 28px;
+}
+
+.company_information_dropdown_item_text{
+    color: #777777;
+    font-size: 16px;
+    word-wrap: break-word;
+    margin: 10px 0px 0px 0px;
+}

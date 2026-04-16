@@ -1,0 +1,47 @@
+.vertical_menu_link_children_item{
+  width: 100%;
+  height: auto;
+}
+
+.vertical_menu_link_children_item_list{
+  width: 100%;
+  height: auto;
+}
+
+.vertical_menu_link_children_item_list_two{
+  width: 100%;
+  height: auto;
+}
+
+.vertical_menu_link_children_item_list_three{
+  width: 100%;
+  height: auto;
+}
+
+.vertical_menu_link_children_item_list_title_one{
+  display: flex;
+  align-items: center;
+  height: 40px;
+  border-bottom: 1px solid #eeeeee;
+  padding: 0px 20px 0px 40px;
+  cursor: pointer;
+}
+
+.vertical_menu_link_children_item_list_title_two{
+  display: flex;
+  align-items: center;
+  height: 40px;
+  border-bottom: 1px solid #eeeeee;
+  padding: 0px 20px 0px 60px;
+  cursor: pointer;
+}
+
+.vertical_menu_link_children_item_list_title_three{
+  display: flex;
+  align-items: center;
+  height: 40px;
+  border-bottom: 1px solid #eeeeee;
+  padding: 0px 20px 0px 80px;
+  cursor: pointer;
+}
+

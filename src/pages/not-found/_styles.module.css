@@ -1,0 +1,19 @@
+.section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.section__one{
+    height: 100vh;
+    width: 100%;
+}
+
+.section__two{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(207, 201, 201);
+}
+
+.section__img{
+    height: 100vh;
+}

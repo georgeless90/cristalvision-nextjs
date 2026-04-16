@@ -1,0 +1,22 @@
+.web_description{
+    width: 100%;
+    height: auto;
+    padding: 0px 0px 0px 0px;
+    margin: 50px 0px 0px 0px ;
+}
+
+.web_description_item_title{
+    color: #333333; 
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.web_description_item_cont_text{
+    margin-top: 20px;
+}
+
+.web_description_item_text{
+    color: #777777;
+    font-size: 16px;
+    
+}
