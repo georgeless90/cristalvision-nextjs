@@ -2,15 +2,12 @@ import React from "react";
 import Head from "next/head";
 
 import styles from "./_styles.module.css";
-import Services from "../../share-utilities/services/_services";
 import MockupService from "../../share-utilities/services/_mockup_service";
 import Header from "../../components/header/component";
 import TitleCreadCrumbs from "../../components/title_and_breadcrumbs/component";
-import ProductCard from "../../components/product-card/component";
 import WebDescription from "../../components/web-description/component";
 import NotificationSystem from "../../components/notification_system/component";
 import Footer from "../../components/footer/component";
-import ProductLeft from "../../components/product-card-left/component";
 
 function GafasAmarillasPolarizadas(props) {
   const structuredData = {
@@ -127,17 +124,7 @@ function GafasAmarillasPolarizadas(props) {
           </h2>
         </div>
 
-        {props.products && (
-          <ul className="products_list">
-            {props.products.map((product) => {
-              return (
-                <div className="products_list_item" key={product._id}>
-                  <ProductCard infoProduct={product} />
-                </div>
-              );
-            })}
-          </ul>
-        )}
+     
 
         <p className="page_body_paragraph">
           En esta tienda online, te ofrecemos anteojos polarizados amarillos.
@@ -154,7 +141,6 @@ function GafasAmarillasPolarizadas(props) {
         </div>
 
         <div className="best_and_selleing_product_cont">
-          <ProductLeft infoProduct={props.bestProduct} />
 
           <p className="page_body_paragraph">
             Es debido a su elegancia evidente y diseño innovador, estas gafas
@@ -193,7 +179,6 @@ function GafasAmarillasPolarizadas(props) {
         </div>
 
         <div className="best_and_selleing_product_cont">
-          <ProductLeft infoProduct={props.bestSellingProduct} />
           <p className="page_body_paragraph">
             Con el mayor porcentaje de calificaciones y comentarios positivos,
             estos anteojos, fueron los irrefutables merecedores del
@@ -214,20 +199,12 @@ export default GafasAmarillasPolarizadas;
 
 export async function getServerSideProps() {
   const categoriesList = await MockupService.getAllCategories();
-  const productsList = await Services.listByCategoryName("amarillas-pola");
   const subcategoryInfo = await MockupService.getSubcategoryById(27);
-  const bestProductInfo = await Services.getBestProduct("amarillas-pola");
-  const bestSellingProductInfo = await Services.getBestSellingProduct(
-    "amarillas-pola"
-  );
 
   return {
     props: {
       categoriesList: categoriesList,
       category: subcategoryInfo[0],
-      products: productsList.body,
-      bestProduct: bestProductInfo.body,
-      bestSellingProduct: bestSellingProductInfo.body,
     },
   };
 }

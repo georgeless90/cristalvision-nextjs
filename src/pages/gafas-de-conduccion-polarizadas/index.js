@@ -2,7 +2,6 @@ import React from "react";
 import Head from "next/head";
 
 import styles from "./_styles.module.css";
-import Services from "../../share-utilities/services/_services";
 import MockupService from "../../share-utilities/services/_mockup_service";
 import Header from "../../components/header/component";
 import TitleCreadCrumbs from "../../components/title_and_breadcrumbs/component";
@@ -121,17 +120,7 @@ function GafasConduccionPolarizadas(props) {
           </h2>
         </div>
 
-        {props.products && (
-          <ul className="products_list">
-            {props.products.map((product) => {
-              return (
-                <div className="products_list_item" key={product._id}>
-                  <ProductCard infoProduct={product} />
-                </div>
-              );
-            })}
-          </ul>
-        )}
+      
 
         <p className="page_body_paragraph">
           Las gafas de conducción polarizados son artículos de moda, que además
@@ -148,7 +137,6 @@ function GafasConduccionPolarizadas(props) {
         </div>
 
         <div className="best_and_selleing_product_cont">
-          <ProductLeft infoProduct={props.bestProduct} />
 
           <p className="page_body_paragraph">
             De los anteojos de conducción polarizados este fue el que obtuvo el
@@ -179,7 +167,6 @@ function GafasConduccionPolarizadas(props) {
         </div>
 
         <div className="best_and_selleing_product_cont">
-          <ProductLeft infoProduct={props.bestSellingProduct} />
           <p className="page_body_paragraph">
             Es un placer mencionar el producto más vendido, si se trata de gafas
             de conducción polarizadas. Este fue el producto líder en ventas en
@@ -199,20 +186,12 @@ export default GafasConduccionPolarizadas;
 
 export async function getServerSideProps() {
   const categoriesList = await MockupService.getAllCategories();
-  const productsList = await Services.listByCategoryName("conduccion-pola");
   const subcategoryInfo = await MockupService.getSubcategoryById(4);
-  const bestProductInfo = await Services.getBestProduct("conduccion-pola");
-  const bestSellingProductInfo = await Services.getBestSellingProduct(
-    "conduccion-pola"
-  );
-
+ 
   return {
     props: {
       categoriesList: categoriesList,
       category: subcategoryInfo[0],
-      products: productsList.body,
-      bestProduct: bestProductInfo.body,
-      bestSellingProduct: bestSellingProductInfo.body,
     },
   };
 }

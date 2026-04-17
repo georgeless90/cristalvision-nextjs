@@ -2,15 +2,12 @@ import React from "react";
 import Head from "next/head";
 
 import styles from "./_styles.module.css";
-import Services from "../../share-utilities/services/_services";
 import MockupService from "../../share-utilities/services/_mockup_service";
 import Header from "../../components/header/component";
 import TitleCreadCrumbs from "../../components/title_and_breadcrumbs/component";
-import ProductCard from "../../components/product-card/component";
 import WebDescription from "../../components/web-description/component";
 import NotificationSystem from "../../components/notification_system/component";
 import Footer from "../../components/footer/component";
-import ProductLeft from "../../components/product-card-left/component";
 
 function GafasDuberyPolarizadas(props) {
   const structuredData = {
@@ -129,18 +126,6 @@ function GafasDuberyPolarizadas(props) {
           </h2>
         </div>
 
-        {props.products && (
-          <ul className="products_list">
-            {props.products.map((product) => {
-              return (
-                <div className="products_list_item" key={product._id}>
-                  <ProductCard infoProduct={product} />
-                </div>
-              );
-            })}
-          </ul>
-        )}
-
         <div className="page_body_subtitle">
           <h2 className="subtitle_text">
             Resaltamos los lentes de sol dubery polarizados mejor calificado por
@@ -149,7 +134,6 @@ function GafasDuberyPolarizadas(props) {
         </div>
 
         <div className="best_and_selleing_product_cont">
-          <ProductLeft infoProduct={props.bestProduct} />
 
           <p className="page_body_paragraph">
             Entre las dubery gafas polarizadas, estas fueron las que sacaron el
@@ -179,7 +163,6 @@ function GafasDuberyPolarizadas(props) {
         </div>
 
         <div className="best_and_selleing_product_cont">
-          <ProductLeft infoProduct={props.bestSellingProduct} />
           <p className="page_body_paragraph">
             Facilitamos aqui el producto más vendido, si hablamos de lentes de
             sol dubery polarizados. Este fue el producto líder en ventas en su
@@ -199,20 +182,13 @@ export default GafasDuberyPolarizadas;
 
 export async function getServerSideProps() {
   const categoriesList = await MockupService.getAllCategories();
-  const productsList = await Services.listByCategoryName("dubery-pola");
   const subcategoryInfo = await MockupService.getSubcategoryById(11);
-  const bestProductInfo = await Services.getBestProduct("dubery-pola");
-  const bestSellingProductInfo = await Services.getBestSellingProduct(
-    "dubery-pola"
-  );
+
 
   return {
     props: {
       categoriesList: categoriesList,
       category: subcategoryInfo[0],
-      products: productsList.body,
-      bestProduct: bestProductInfo.body,
-      bestSellingProduct: bestSellingProductInfo.body,
     },
   };
 }

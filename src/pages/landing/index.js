@@ -3,7 +3,6 @@ import Head from "next/head";
 
 import Header from "../../components/header/component";
 import Mockup_service from "../../share-utilities/services/_mockup_service";
-import ProductCard from "../../components/product-card/component";
 import styles from "./_styles.module.css";
 import ImagesCta from "../../components/images-call-to-action/component";
 import ScreenList from "../../components/screen_list/component";
@@ -132,17 +131,7 @@ function ProductsList(props) {
           </h2>
         </div>
 
-        {props.productsWoman && (
-          <ul className="products_list">
-            {props.productsWoman.map((product) => {
-              return (
-                <div className="products_list_item" key={product._id}>
-                  <ProductCard infoProduct={product} />
-                </div>
-              );
-            })}
-          </ul>
-        )}
+        
 
         <div className="page_body_subtitle">
           <h2 className="subtitle_text">Marcas de gafas polarizadas</h2>
@@ -203,17 +192,6 @@ function ProductsList(props) {
           </h2>
         </div>
 
-        {props.productsMan && (
-          <ul className="products_list">
-            {props.productsMan.map((product) => {
-              return (
-                <div className="products_list_item" key={product._id}>
-                  <ProductCard infoProduct={product} />
-                </div>
-              );
-            })}
-          </ul>
-        )}
 
         <div className="page_body_subtitle">
           <h2 className="subtitle_text">
