@@ -1,8 +1,9 @@
+//1. Esta es la function que meneja el endpoint que se comunica con el hook de make.com
+
 export default async function handler(req, res) {
   try {
-    console.log("BODY:", req.body);
-    console.log("WEBHOOK:", process.env.MAKE_WEBHOOK_URL);
 
+    //1. Se hace usao de la environment variable
     const response = await fetch(process.env.MAKE_WEBHOOK_URL, {
       method: "POST",
       headers: {

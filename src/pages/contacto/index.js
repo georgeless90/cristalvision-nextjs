@@ -1,5 +1,4 @@
 import React from "react";
-import { useRouter } from "next/router";
 import Head from "next/head";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faMessage } from "@fortawesome/free-solid-svg-icons";
@@ -18,33 +17,22 @@ import SocialMediaIcons from "../../components/social_media_icons/component";
 import Footer from "../../components/footer/component";
 
 function Contact(props) {
-  const router = useRouter();
 
+  //1. Para el manejo de los inputs se uso un reack hook, que es basicamente, 
+  // este function useInputProps("") que se importa para que maneje los datos de todos los inputs
   const email = useInputProps("");
   const message = useInputProps("");
 
-  const handleLogin = () => {
-    let form = {
-      email: email.value,
-      text: message.value,
-    };
 
-
-    Services.createMessage(form)
-      .then((response) => {
-        if (response.status == 201) {
-          router.push("/");
-        }
-      })
-      
-  };
-
+  //1. Para llamar un endoin por medio de api usando url, no es necesario, importar un service
+  //1. esta es la function que se encarga de enviar los datos al hook de make.com y luego make envia 
+  // un email a gmail
   async function handleSubmit() {
     let form = {
       email: email.value,
       text: message.value,
     };
-
+    //1. este este caso la url del endpoint quedo /api/webhook, sin folder intermedia
     const res = await fetch("/api/webhook", {
       method: "POST",
       headers: {
@@ -54,6 +42,11 @@ function Contact(props) {
     });
 
     const result = await res.json();
+
+    form = {
+      email: "",
+      text: "",
+    };
     console.log(result);
   };
 
@@ -91,6 +84,7 @@ function Contact(props) {
                     >
                       Correo electronico
                     </label>
+                    {/* 1.Asi se usa la variable en el input: {...email} */}
                     <input
                       className="input_component_form_field"
                       placeholder="Escribe el correo electronico"
@@ -131,7 +125,6 @@ function Contact(props) {
 
               <button
                 className="form_button"
-                type="button"
                 onClick={handleSubmit}
               >
                 <span className="form_button_text">Enviar</span>
